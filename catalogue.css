@@ -1,4 +1,8 @@
-*{
+*
+body {
+	font-family: 'Roboto', sans-serif;
+}
+{
     padding: 0%;
     margin: 0%;
     box-sizing: border-box ;
@@ -76,7 +80,6 @@
     padding: 5px 25px;
   }
   .content{
-    background-image: url(images.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     padding: 0 5%;
@@ -109,8 +112,53 @@
     font-weight: 300;
     margin-top: 30px;
     margin-left: 80px;
-    color: beige;
+    color: rgb(44, 108, 204);
 }
 .section_jeux{
-    padding-left: 40;
+    padding-left: 40 5%;
+}
+.jeux{
+    display: grid;
+    grid-template-columns: repeat(auto);
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+.jeux .carte{
+    width: 310px;
+    background: #f5f5f5;
+    bottom:0 10px 20px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    margin-bottom: 20px; 
+}
+
+.jeux .carte img{
+    height: 250px;
+    width: 100%;
+}
+.jeux .carte .desc{
+    padding: 5px 20px;
+    opacity: 0.8;
+}
+.jeux .carte .titre.{
+    font-weight: 900;
+    font-size: 20px;
+    color: blue;
+    padding: 0 20px;
+}
+.jeux .carte .box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.jeux .carte .prix{
+    color: #ea1f33;
+    font-size: 20px;
+    font-weight: bold;
+}
+.jeux .carte .button{
+    font-size: 13px;
+    font-weight: 900;
+    color: #ea1f33;
+    padding: 10px 18px;
+    border-radius: 1px solid #ea1f33;
 }

@@ -125,7 +125,7 @@ body {
 .jeux .carte{
     width: 310px;
     background: #f5f5f5;
-    bottom:0 10px 20px rgba(0,0,0,0.3);
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
     border-radius: 10px;
     margin-bottom: 20px; 
 }
@@ -133,6 +133,7 @@ body {
 .jeux .carte img{
     height: 250px;
     width: 100%;
+    border-radius: 10px;
 }
 .jeux .carte .desc{
     padding: 5px 20px;
@@ -161,4 +162,20 @@ body {
     color: #ea1f33;
     padding: 10px 18px;
     border-radius: 1px solid #ea1f33;
+}
+footer{
+  background: #f3f4f3;
+  height: 10v;
+
+}
+
+footer p {
+  text-align: center;
+  line-height: 10vh;
+}
+footer p a{
+  text-decoration: navajowhite;
+  color: #f63e4e;
+  font-weight: bold;
+
 }

@@ -16,33 +16,6 @@
     color: #fff;
     padding: 5px 25px;
   }
-  .content{
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 0 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    color: #ea1f33;
-    height: 100vh;
-  }
-  .content h1{
-    font-size: 40px;
-  }
-.content p{
-    font-size: 20px;
-    margin-top: 20px;
-}
-.content button{
-    margin-top: 30px;
-    padding: 30px;
-    padding: 15px 30px;
-    border:none ;
-    color:azure;
-    border-radius: 5px;
-    cursor: pointer;
-}
 .produits_texte{
     text-align: left;
     font-size: 30px;

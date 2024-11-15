@@ -17,32 +17,30 @@
   font-size: 2rem;
 }
 
-ul{
-  list-style: none;
-  float: right;
-  display: flex;
-  margin-top: 20px;
-}
-
-ul li a{
+.back-button{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
-  color: #fff;
-  padding: 10px 20px;
-  text-transform: uppercase;
-  border: 1px solid transparent;
+  color: #007bff;
+  font-size: 16px;
   font-weight: 500;
-  transition: 0.6s ease;
+  transition: color 0.3s;
+}
+.back-button .arrow{
+  margin-right: 8px;
+  font-size: 20px;
+  transition: transform 0.3s; 
+}
+.back-button:hover{
+  color: #0056b3;
+}
+.back-button:hover .arrow{
+  transform: translate(-4px);
 }
 
-ul li a:hover{
-  background: #fff;
-  color: #000;
-}
-
-ul li.active a{
-  max-width: 114rem;
-  margin: 0 auto;
-}
 /* 
 ---------------------------------------------
 font & reset css
@@ -138,7 +136,9 @@ img {
   width: 100%;
   overflow: hidden;
 }
-
+.games-container { 
+  align-items: center;                
+}
 /* 
 ---------------------------------------------
 Global Styles
@@ -146,7 +146,7 @@ Global Styles
 */
 html,
 body {
-  background: #1f2122;
+  background: #000000;
   font-family: 'Poppins', sans-serif;
 }
 

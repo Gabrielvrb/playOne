@@ -1,10 +1,4 @@
-# Jeu List API Integration
 
-Ce projet récupère et affiche une liste de jeux vidéo depuis l'API **RAWG** et permet de charger plus de jeux lorsque l'utilisateur clique sur un bouton "Load More". Le projet est conçu en HTML, CSS, et JavaScript.
-
-## Description
-
-Ce script permet de charger et afficher dynamiquement une liste de jeux vidéo à partir de l'API **RAWG**. Il affiche des informations clés sur chaque jeu, telles que le nom, la date de sortie, la plateforme et la note. Un bouton "Load More" permet de charger plus de jeux lorsque l'utilisateur fait défiler la page.
 .logo a{
   color: #fff;
   padding: 0px 20px;

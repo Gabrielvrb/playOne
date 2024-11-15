@@ -1,15 +1,15 @@
-const KEYAPP = "92478ec0daa54320b15197b8b0639ac9"
-const loaderEl = document.getElementById("js.preloader")
-const gameList = document.querySelector(".gameList")
-const loadMoreGamesBtn = document.querySelector(".main-button")
-let nextGameListUrl = null;
+const KEYAPP = "92478ec0daa54320b15197b8b0639ac9"// Votre clé API
+const loaderEl = document.getElementById("js.preloader")// Élément pour afficher un loader
+const gameList = document.querySelector(".gameList")// Conteneur où les jeux seront affichés
+const loadMoreGamesBtn = document.querySelector(".main-button")// Bouton pour charger plus de jeux
+let nextGameListUrl = null;// URL pour charger la page suivante de jeux
 
-const url = `https://api.rawg.io/api/games?key=${KEYAPP}&dates=2024-01-01,2024-12-30&ordering=-added`;
+const url = `https://api.rawg.io/api/games?key=${KEYAPP}&dates=2024-01-01,2024-12-30&ordering=-added`;//API RAWG tu dois récupérer les jeux vidéo entre janvier 2024 et décembre 2024, triés par date d'ajout.
 
 const getPlatformStr = (platforms) => {
   const platformStr = platforms.map(pl => pl.platform.name).join(", ");
   if (platformStr.length > 30) {
-      return platformStr.substring(0, 30) + "...";
+      return platformStr.substring(0, 30) + "...";//retour si plus de 30 caractères
   }
   return platformStr;
 }
@@ -20,8 +20,8 @@ function loadGames(url){
   .then(response => response.json())
   .then(data => {
     console.log(data)
-    nextGameListUrl = data.next ? data.next : null;
-    const games = data.results
+    nextGameListUrl = data.next ? data.next : null;// URL pour les jeux suivants
+    const games = data.results // Liste des jeux reçus
     
     games.forEach(game =>{
         const gameItemEl = ` 
@@ -40,7 +40,7 @@ function loadGames(url){
                 `
                 gameList.insertAdjacentHTML("beforeend", gameItemEl)
             });
-            loaderEl.classList.add("loaded");
+            loaderEl.classList.add("loaded");// Masque le loader
             if (nextGameListUrl) {
                 loadMoreGamesBtn.classList.remove("hidden");
             } else {
